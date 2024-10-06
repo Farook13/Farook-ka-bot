@@ -495,7 +495,7 @@ async def get_shortlink(chat_id, link):
         }
         try:
             async with aiohttp.ClientSession() as session:
-                async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                async with session.get(url, params=params, raise_for_status=True, ssl=True) as response:
                     data = await response.json(content_type="text/html")
                     if data["status"] == "success":
                         return data["shortlink"]
@@ -513,7 +513,7 @@ async def get_shortlink(chat_id, link):
         }
         try:
             async with aiohttp.ClientSession() as session:
-                async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                async with session.get(url, params=params, raise_for_status=True, ssl=True) as response:
                     data = await response.json()
                     if data["status"] == "success":
                         return data["shortenedUrl"]
