@@ -20,23 +20,23 @@
     "repository": "https://github.com/Devil-Botz/Elsa",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token.",
+            "description": "7467663197:AAEXu5mIB4jyKKO6tenQnu_mtBsngXg38t0",
             "required": true
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "17264725",
             "required": true
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "e7c6c1e727962d2ade50ba1d7f4fac8a",
             "required": true
         },
         "CHANNELS": {
-            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "description": "-1002429399114",
             "required": false
         },
         "ADMINS": {
-            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "description": "5032034594",
             "required": true
         },
         "PICS": {
@@ -44,7 +44,7 @@
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "description": "-1002289409354",
             "required": true
         },
         "AUTH_USERS": {
