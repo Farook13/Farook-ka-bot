@@ -1,5 +1,5 @@
 {
-    "name": "Elsa Bot",
+    "name": "Batman Bot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "logo": "https://telegra.ph/file/d9f242d81ef69cc8a1ec5.jpg",
     "stack": "container",
