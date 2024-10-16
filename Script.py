@@ -131,11 +131,6 @@ class script(object):
 
 {file_name}
     
-    RESTART_TXT = """
-    
-Date : <code>{}</code>
-Time : <code>{}</code>
-Timezone : <code>Asia/Kolkata</code></b>"""
 <blockquote>⚠️ ഈ ബോട്ടിൽ നിന്നും തീയറ്റർ പ്രിന്റുകൾ  മാത്രമേ ലഭിക്കുകയുള്ളൂ..⚡</blockquote>
              
 ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
