@@ -132,7 +132,7 @@ class script(object):
 {file_name}
     
     RESTART_TXT = """
-Bot Restarted !
+<Bot Restarted !>
 Date : <code>{}</code>
 Time : <code>{}</code>
 Timezone : <code>Asia/Kolkata</code></b>"""
