@@ -132,10 +132,10 @@ class script(object):
 {file_name}
     
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
-Dᴀᴛᴇ : <code>{}</code>
-Tɪᴍᴇ : <code>{}</code>
-Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code></b>"""
+<b>Bot Restarted !
+Date : <code>{}</code>
+Time : <code>{}</code>
+Timezone : <code>Asia/Kolkata</code></b>"""
 <blockquote>⚠️ ഈ ബോട്ടിൽ നിന്നും തീയറ്റർ പ്രിന്റുകൾ  മാത്രമേ ലഭിക്കുകയുള്ളൂ..⚡</blockquote>
              
 ╔═══ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═══╗
