@@ -83,7 +83,7 @@ MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://pcmovies:pcmovies@cluster
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # FSUB
-auth_channel = environ.get('None')
+auth_channel = environ.get('5032034594')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNEL = environ.get("REQ_CHANNEL", False)
