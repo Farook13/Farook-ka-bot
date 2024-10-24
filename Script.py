@@ -5,12 +5,9 @@ class script(object):
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
 
-    # ⚠️ Please don't change our credits 𝚃𝙷𝙰𝙽𝙺𝚂 𝚃𝙾 & 𝙳𝙴𝚅 👇🏻
+    
 
     ABOUT_TXT = """<b>✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/+1iWSCrpI_083MDM1>𝙲𝙸𝙽𝙴𝙼𝙰𝙻𝙰.𝙲𝙾𝙼</a>
-✯ 𝚃𝙷𝙰𝙽𝙺𝚂 𝚃𝙾: <a href=https://t.me/creatorbeatz>Jᴏᴇʟ ᠰ TɢX</a>
-✯ 𝙳𝙴𝚅: <a href=https://t.me/A_s_w_i_n_01>『Dᴇᴠɪʟ࿐Tɢ』</a>
 ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
 ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
 ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱
@@ -18,10 +15,7 @@ class script(object):
 ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.0.1 [ 𝙱𝙴𝚃𝙰 ]</b>"""
 
     SOURCE_TXT = """<b>NOTE:</b>
-<b>- 𝙴𝙻𝚂𝙰 𝙸𝚂 𝙾𝙿𝙴𝙽 𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝚁𝙾𝙹𝙴𝙲𝚃. 
-- 𝚂𝙾𝚄𝚁𝙲𝙴 - 𝙲𝙻𝙸𝙲𝙺 𝚁𝙴𝙿𝙾 𝙱𝚄𝚃𝚃𝙾𝙽</b>
-<b>DEVS:</b>
-- <a href=https://t.me/+1iWSCrpI_083MDM1>𝙲𝙸𝙽𝙴𝙼𝙰𝙻𝙰.𝙲𝙾𝙼</a>"""
+<b>- I AM BATMAN
 
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
@@ -40,7 +34,7 @@ class script(object):
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-<b>𝙴𝙻𝚂𝙰 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝚂 𝙱𝙾𝚃𝙷 𝚄𝚁𝙻 𝙰𝙽𝙳 𝙰𝙻𝙴𝚁𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙱𝚄𝚃𝚃𝙾𝙽𝚂.</b>
+<b>BATMAN 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝚂 𝙱𝙾𝚃𝙷 𝚄𝚁𝙻 𝙰𝙽𝙳 𝙰𝙻𝙴𝚁𝚃 𝙸𝙽𝙻𝙸𝙽𝙴 𝙱𝚄𝚃𝚃𝙾𝙽𝚂.</b>
 <b>NOTE:</b>
 <b>𝟷. 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝚆𝙸𝙻𝙻 𝙽𝙾𝚃 𝙰𝙻𝙻𝙾𝚆𝚂 𝚈𝙾𝚄 𝚃𝙾 𝚂𝙴𝙽𝙳 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝚆𝙸𝚃𝙷𝙾𝚄𝚃 𝙰𝙽𝚈 𝙲𝙾𝙽𝚃𝙴𝙽𝚃, 𝚂𝙾 𝙲𝙾𝙽𝚃𝙴𝙽𝚃 𝙸𝚂 𝙼𝙰𝙽𝙳𝙰𝚃𝙾𝚁𝚈.
 𝟸. 𝙴𝙻𝚂𝙰 𝚂𝚄𝙿𝙿𝙾𝚁𝚃𝚂 𝙱𝚄𝚃𝚃𝙾𝙽𝚂 𝚆𝙸𝚃𝙷 𝙰𝙽𝚈 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼 𝙼𝙴𝙳𝙸𝙰 𝚃𝚈𝙿𝙴.
