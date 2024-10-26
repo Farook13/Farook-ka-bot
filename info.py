@@ -55,6 +55,10 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://farook:farook@cluster0
 DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
+AI = is_enabled((environ.get("AI","True")), True)
+OPENAI_API = environ.get("OPENAI_API"," ")
+AI_LOGS = int(environ.get("AI_LOGS"," "))
+
 # Premium And Referal Settings
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
 
