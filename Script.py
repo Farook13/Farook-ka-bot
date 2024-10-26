@@ -124,7 +124,22 @@ Elsa
 <b>📌 𝑺𝒖𝒑𝒑𝒐𝒓𝒕 : @OTT_ARAKAL_THERAVAD_MOVIESS</b>
 
 <b>🍂 𝑶𝒘𝒏𝒆𝒓 : @ARAKAL_THERAVAD_MOVIES_02_bot</b>"""
+      
+    
+    IMDB_TEMPLATE_TXT = """
+<b>🔖 ᴛɪᴛʟᴇ :<a href={url}>{title}</a>
 
+🎭 ɢᴇɴʀᴇs : {genres}
+🎖 ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating}</a> / 10 (ʙᴀsᴇᴅ ᴏɴ {votes} ᴜsᴇʀ ʀᴀᴛɪɴɢ.)
+
+📆 ʏᴇᴀʀ : {release_date}
+🗞 ʟᴀɴɢᴜᴀɢᴇ : {languages}
+🌎 ᴄᴏᴜɴᴛʀʏ : {countries}
+
+©{message.chat.title}</b>
+"""
+
+    CUSTOM_FILE_CAPTION = """<b>📂 Fɪʟᴇ ɴᴀᴍᴇ : {file_name}
         
     RESTART_TXT = """
 <b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
