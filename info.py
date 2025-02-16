@@ -61,7 +61,7 @@ MELCOW_VID = environ.get('MELCOW_VID',"")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5032034594').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-4518480478 -1002252567170').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-4518480478 -1002467149516 -1002252567170 ').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('17264725', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
@@ -118,7 +118,7 @@ MOVIE_GROUP = environ.get('MOVIE_GROUP',"https://t.me/moviecafe_offcial")
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+1dbVg9pA2GphZmI1")
 MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('-1002467149516', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Elsasupportgp')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
