@@ -8,7 +8,7 @@ if ENVIRONMENT:
     except ValueError:
         raise Exception("Your API_ID is not a valid integer.")
     API_HASH = os.environ.get('e7c6c1e727962d2ade50ba1d7f4fac8a', None)
-    BOT_TOKEN = os.environ.get('BOT_TOKEN', None)
+    BOT_TOKEN = os.environ.get('7955983025:AAFqrIti8CrhCvPTY0IKV2qu4xnxF96sL40', None)
     DATABASE_URL = os.environ.get('DATABASE_URL', None)
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")  # Sqlalchemy dropped support for "postgres" name.
     # https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
@@ -18,8 +18,8 @@ if ENVIRONMENT:
 else:
     # Fill the Values
     API_ID = 17264725
-    API_HASH = "49aacd0bc2f8924add29fb02e20c8a16"
-    BOT_TOKEN = "7604132111:AAE_7WXusNWRezacHuji4gvN6mFuCoPVhpU"
+    API_HASH = "e7c6c1e727962d2ade50ba1d7f4fac8a"
+    BOT_TOKEN = "7955983025:AAFqrIti8CrhCvPTY0IKV2qu4xnxF96sL40"
     DATABASE_URL = ""
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = "StarkBots"
