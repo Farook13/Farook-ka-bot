@@ -1,15 +1,6 @@
 import re
-import os
-from os import environ
-from pyrogram import enums
+from os import environ,getenv
 from Script import script
-from dotenv import load_dotenv
-
-import asyncio
-import json
-from collections import defaultdict
-from typing import Dict, List, Union
-from pyrogram import Client
 
 id_pattern = re.compile(r'^.\d+$')
 def is_enabled(value, default):
@@ -19,129 +10,123 @@ def is_enabled(value, default):
         return False
     else:
         return default
-
-class evamaria(Client):
-    filterstore: Dict[str, Dict[str, str]] = defaultdict(dict)
-    warndatastore: Dict[
-        str, Dict[str, Union[str, int, List[str]]]
-    ] = defaultdict(dict)
-    warnsettingsstore: Dict[str, str] = defaultdict(dict)
-
-    def __init__(self):
-        name = self.__class__.__name__.lower()
-        super().__init__(
-            ":memory:",
-            plugins=dict(root=f"{name}/plugins"),
-            workdir=TMP_DOWNLOAD_DIRECTORY,
-            api_id=17264725,
-            api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
-            parse_mode=enums.ParseMode.HTML,
-            sleep_threshold=60
-        )
-
-# Bot information
-SESSION = environ.get('Media_search', '')
-API_ID = int(environ['17264725'])
-API_HASH = environ['e7c6c1e727962d2ade50ba1d7f4fac8a']
-BOT_TOKEN = environ['7955983025:AAFqrIti8CrhCvPTY0IKV2qu4xnxF96sL40']
-
-# Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/2992a480cae2bc0de1c39.jpg https://telegra.ph/file/76e7b5e94430b84a3d2b2.jpg https://telegra.ph/file/3544a8773740b0412c9dd.jpg https://telegra.ph/file/4b1c7004ea8bd3fed8df9.jpg https://telegra.ph/file/a02e47d932adc336740fa.jpg')).split()
-NOR_IMG = environ.get('NOR_IMG', "https://telegra.ph/file/7d7cbf0d6c39dc5a05f5a.jpg")
-SPELL_IMG = environ.get('SPELL_IMG',"https://telegra.ph/file/b58f576fed14cd645d2cf.jpg")
-
-# Welcome area
-MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/e54cae941b9b81f13eb71.jpg")
-MELCOW_VID = environ.get('MELCOW_VID',"")
-
-
-
-# Admins, Channels & Users
+#---------------------------------------------------------------
+#---------------------------------------------------------------         ,
+SESSION = environ.get('SESSION', 'Media_search')
+API_ID = int(environ.get('API_ID', '17264725'))
+API_HASH = environ.get('API_HASH', 'e7c6c1e727962d2ade50bald7f4fac8a')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7955983025:AAFqrIti8CrhCvPTY0IKV2qu4xnxF96sL40')
+#---------------------------------------------------------------
+#---------------------------------------------------------------
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5032034594').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-4518480478 -1002467149516 -1002252567170 ').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('17264725', '').split()]
-AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_grp = environ.get('AUTH_GROUP')
-AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID','-1002060419415')
-# This is required for the plugins involving the file system.
-TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
-
-# Command
-COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
-
-# MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://farook:farook@cluster0.dmaou.mongodb.net/")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram")
+USERNAME = environ.get('USERNAME', "https://t.me/ll_Crazy_munda_ll") # ADMIN USERNAME
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002467149516'))
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/SAKSHI_SUPPORT')
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002256041072').split()]
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Skking49:Skking49@sktesting.awlap.mongodb.net/?retryWrites=true&w=majority&appName=Sktesting")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Sktesting")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
-MONGO_URL = os.environ.get('MONGO_URL', "mongodb+srv://farook:farook@cluster0.dmaou.mongodb.net/")
-
-#Downloader
-DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
-
-# FSUB
-auth_channel = environ.get('AUTH_CHANNEL')
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+#----------- There will be channel id add in all these ---------
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))  
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL','0'))
+DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','0'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '0'))
+auth_channel = environ.get('AUTH_CHANNEL', '')
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '0'))
+request_channel = environ.get('REQUEST_CHANNEL', '0')
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '0'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/') #Support group link ( make sure bot is admin )
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+IS_VERIFY = is_enabled('IS_VERIFY', True)
+#---------------------------------------------------------------
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
+VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
+SHORTENER_API = environ.get("SHORTENER_API", "3097623f852197a9ce40d1212aaa8bbf2803e799")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'omegalinks.in')
+SHORTENER_API2 = environ.get("SHORTENER_API2", "3097623f852197a9ce40d1212aaa8bbf2803e799")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", 'omegalinks.in')
+SHORTENER_API3 = environ.get("SHORTENER_API3", "3097623f852197a9ce40d1212aaa8bbf2803e799")
+SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", 'omegalinks.in')
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "14400"))
+THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam", "bengali", "marathi", "gujarati", "punjabi"]
+QUALITIES = ["HdRip","web-dl" ,"bluray", "hdr", "fhd" , "240p", "360p", "480p", "540p", "720p", "960p", "1080p", "1440p", "2K", "2160p", "4k", "5K", "8K"]
+YEARS = [f'{i}' for i in range(2024 , 2002,-1 )]
+SEASONS = [f'season {i}'for i in range (1 , 23)]
+REF_PREMIUM = 30
+PREMIUM_POINT = 1500
+#---------------------------------------------------------------
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-# Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL = environ.get("REQ_CHANNEL", False)
-REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
-JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+START_IMG = (environ.get('START_IMG', 'https://envs.sh/_1C.jpg')).split()
+FORCESUB_IMG = environ.get('FORCESUB_IMG', 'https://i.ibb.co/ZNC1Hnb/ad3f2c88a8f2.jpg')
+REFER_PICS = (environ.get("REFER_PICS", "https://envs.sh/PSI.jpg")).split() 
+PAYPICS = (environ.get('PAYPICS', 'https://graph.org/file/f4db1c3ad3d9e38b328e6.jpg')).split()
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/9f3f47c690bbcc67633c2.jpg'))
+REACTIONS = ["👀", "😱", "🔥", "😍", "🎉", "🥰", "😇", "⚡"]
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
+AUTO_FILTER = is_enabled('AUTO_FILTER', True)
+IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
+PORT = environ.get('PORT', '5000')
+MAX_BTN = int(environ.get('MAX_BTN', '8'))
+AUTO_DELETE = is_enabled('AUTO_DELETE', True)
+DELETE_TIME = int(environ.get('DELETE_TIME', 1200))
+IMDB = is_enabled('IMDB', False)
+FILE_CAPTION = environ.get('FILE_CAPTION', f'{script.FILE_CAPTION}')
+IMDB_TEMPLATE = environ.get('IMDB_TEMPLATE', f'{script.IMDB_TEMPLATE_TXT}')
+LONG_IMDB_DESCRIPTION = is_enabled('LONG_IMDB_DESCRIPTION', False)
+PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
+SPELL_CHECK = is_enabled('SPELL_CHECK', True)
+LINK_MODE = is_enabled('LINK_MODE', True)
 
-#url links
-SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
-SHORTLINK_API = environ.get('SHORTLINK_API', '')
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
+# Online Stream and Download
 
-#Openai
-AI = is_enabled((environ.get("AI","True")), True)
-OPENAI_API = environ.get("OPENAI_API"," ")
-AI_LOGS = int(environ.get("AI_LOGS"," ")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
+MULTI_CLIENT = False
+SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
+PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
+if 'DYNO' in environ:
+    ON_HEROKU = True
+else:
+    ON_HEROKU = False
+URL = environ.get("FQDN", "")
 
-
-#Auto approve
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '0').split()]
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "Hello {mention}\nWelcome To {title}\n\nYour request has been approved")
-APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
-
-# Others
-SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
-PORT = os.environ.get("PORT", "8080")
-MAX_BTN = int(environ.get('MAX_BTN', "7"))
-S_GROUP = environ.get('S_GROUP',"https://t.me/Elsasupport_gp")
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/+1iWSCrpI_083MDM1")
-MOVIE_GROUP = environ.get('MOVIE_GROUP',"https://t.me/moviecafe_offcial")
-#Must change this link to work redirect (FILE_FORWORD)
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+1dbVg9pA2GphZmI1")
-MSG_ALRT = environ.get('MSG_ALRT', '𝑪𝑯𝑬𝑪𝑲 & 𝑻𝑹𝒀 𝑨𝑳𝑳 𝑴𝒀 𝑭𝑬𝑨𝑻𝑼𝑹𝑬𝑺')
-FILE_CHANNEL = int(environ.get('FILE_CHANNEL', 0))
-LOG_CHANNEL = int(environ.get('-1002467149516', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Elsasupportgp')
-AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
-IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CUSTOM_FILE_CAPTION}")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
-LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
-SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
-MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
-INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
-MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
-PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
-
-LOG_STR = "Current Cusomized Configurations are:-\n"
-LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
-LOG_STR += ("P_TTI_SHOW_OFF found , Users will be redirected to send /start to Bot PM instead of sending file file directly\n" if P_TTI_SHOW_OFF else "P_TTI_SHOW_OFF is disabled files will be send in PM, instead of sending start.\n")
-LOG_STR += ("SINGLE_BUTTON is Found, filename and files size will be shown in a single button instead of two separate buttons\n" if SINGLE_BUTTON else "SINGLE_BUTTON is disabled , filename and file_sixe will be shown as different buttons\n")
-LOG_STR += (f"CUSTOM_FILE_CAPTION enabled with value {CUSTOM_FILE_CAPTION}, your files will be send along with this customized caption.\n" if CUSTOM_FILE_CAPTION else "No CUSTOM_FILE_CAPTION Found, Default captions of file will be used.\n")
-LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_IMDB_DESCRIPTION is disabled , Plot will be shorter.\n")
-LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
-LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
-LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
+#---------------------------------------------------------------
+#---------------------------------------------------------------
+SETTINGS = {
+            'spell_check': SPELL_CHECK,
+            'auto_filter': AUTO_FILTER,
+            'file_secure': PROTECT_CONTENT,
+            'auto_delete': AUTO_DELETE,
+            'template': IMDB_TEMPLATE,
+            'caption': FILE_CAPTION,
+            'tutorial': TUTORIAL,
+            'shortner': SHORTENER_WEBSITE,
+            'api': SHORTENER_API,
+            'shortner_two': SHORTENER_WEBSITE2,
+            'api_two': SHORTENER_API2,
+            'log': LOG_VR_CHANNEL,
+            'imdb': IMDB,
+            'link': LINK_MODE, 
+            'is_verify': IS_VERIFY, 
+            'verify_time': TWO_VERIFY_GAP,
+            'shortner_three': SHORTENER_WEBSITE3,
+            'api_three': SHORTENER_API3,
+            'third_verify_time': THREE_VERIFY_GAP
+}
