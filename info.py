@@ -29,6 +29,8 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Skking49:Skking49@skte
 DATABASE_NAME = environ.get('DATABASE_NAME', "Sktesting")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 #---------------------------------------------------------------
+MELCOW_IMG = environ.get('MELCOW_IMG',"https://telegra.ph/file/e54cae941b9b81f13eb71.jpg")
+MELCOW_VID = environ.get('MELCOW_VID',"")
 #---------------------------------------------------------------
 #----------- There will be channel id add in all these ---------
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '0'))  
