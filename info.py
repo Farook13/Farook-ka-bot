@@ -117,7 +117,6 @@ SETTINGS = {
             'shortner_two': SHORTENER_WEBSITE2,
             'api_two': SHORTENER_API2,
             'log': LOG_VR_CHANNEL,
-            'imdb': IMDB,
             'link': LINK_MODE, 
             'is_verify': IS_VERIFY, 
             'verify_time': TWO_VERIFY_GAP,
