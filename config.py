@@ -20,7 +20,7 @@ else:
     API_ID = 17264725
     API_HASH = "e7c6c1e727962d2ade50ba1d7f4fac8a"
     BOT_TOKEN = "7955983025:AAFqrIti8CrhCvPTY0IKV2qu4xnxF96sL40"
-    DATABASE_URL = ""
+    DATABASE_URL = "mongodb+srv://farook:farook@cluster0.dmaou.mongodb.net/"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = "StarkBots"
     if MUST_JOIN.startswith("@Faroo_bruh"):
