@@ -104,4 +104,5 @@ class Bot(Client):
 
 
 
+app = bot ()
 app.run()
